@@ -74,7 +74,7 @@ public class ObjectViewer : MonoBehaviour {
     }
 
     public void onBodyChange(Body b) {
-        
+        SetMesh(b.mesh);
     }
 
     public void SetMesh(Mesh mesh) {
