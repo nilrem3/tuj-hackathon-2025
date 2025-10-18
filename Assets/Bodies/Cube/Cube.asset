@@ -16,7 +16,7 @@ MonoBehaviour:
   scaleOffset: 1
   sizeActual: 0
   distanceActual: 0
-  mesh: {fileID: -1828685522041717323, guid: 3ad7117c14d9c94d9a55f3c5481c698a, type: 3}
+  mesh: {fileID: -2432090755550338912, guid: 5ebf613a2df4175ad9df4a645a066402, type: 3}
   material: {fileID: 2100000, guid: f1957ed9fb580ce28981a7c8357d2390, type: 2}
   shapeDef: 2
   materialDef: 1
