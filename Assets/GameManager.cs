@@ -31,6 +31,8 @@ public class GameManager : MonoBehaviour
     public CurveRenderer lightCurveRenderer;
     public CurveRenderer spectralRenderer;
     
+    private 
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
