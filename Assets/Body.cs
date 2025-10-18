@@ -7,10 +7,10 @@ public class Body : ScriptableObject
     public int distanceActual;
     
     public MeshFilter meshFilter;
-    public int[] brightnessCurve;
+    public BrightnessCurve brightnessCurve;
     
     public MeshRenderer meshRenderer;
-    public int[] lightQuality;
+    public LightQuality lightQuality;
 
     public int luminosityTotal;
 }
