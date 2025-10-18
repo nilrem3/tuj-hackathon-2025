@@ -11,18 +11,22 @@ public class GameManager : MonoBehaviour
         ChoosingBody = 2,
         CheckingAnswer = 3,
     }
-
-    public static GameManager Instance {  get; private set; }
-    
     public GameState state;
+    
+    public static GameManager Instance { get; private set; }
+    
     
     public Body[] bodies;
     public int currentBodyIndex = -1;
     public Body CurrentBody => bodies[currentBodyIndex];
+    public int CurrentLuminosity;
+    public int[] CurrentBrightnessCurve = new int[10];
+    public int[] CurrentLightQuality = new int[10];
+    [SerializeField] private int noiseMax = 5;
 
     public UnityEvent<Body> onBodyChosen;
     
-    private HashSet<int> _visitedBodies;
+    private HashSet<int> _visitedBodies = new HashSet<int>();
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -73,10 +77,44 @@ public class GameManager : MonoBehaviour
         do
         {
             newBodyIndex = Random.Range(0, bodies.Length);
-        } while (currentBodyIndex == newBodyIndex);
+        } while (currentBodyIndex == newBodyIndex && _visitedBodies.Contains(newBodyIndex));
         
+        _visitedBodies.Add(newBodyIndex);
         currentBodyIndex = newBodyIndex;
+        
+        CalculateNoisyValues();
+        
         onBodyChosen.Invoke(bodies[currentBodyIndex]);
         state = GameState.Playing;
+    }
+
+    void CalculateNoisyValues()
+    {
+        if (CurrentBody.brightnessCurve == null)
+        {
+            throw new System.Exception("CurrentBody has no brightness curve");
+        }
+        else
+        {
+            int sumBrightness = 0;
+            for (int i = 0; i < CurrentBody.brightnessCurve.values.Length; i++)
+            {
+                CurrentBrightnessCurve[i] = CurrentBody.brightnessCurve.values[i] + Random.Range(-noiseMax, noiseMax);;
+                sumBrightness += CurrentBrightnessCurve[i];
+            }
+            CurrentLuminosity = sumBrightness;
+        }
+        
+        if (CurrentBody.lightQuality == null)
+        {
+            throw new System.Exception("CurrentBody has no brightness curve");
+        }
+        else
+        {
+            for (int i = 0; i < CurrentBody.lightQuality.values.Length; i++)
+            {
+                CurrentLightQuality[i] = CurrentBody.lightQuality.values[i] + Random.Range(-noiseMax, noiseMax);;
+            }
+        }
     }
 }

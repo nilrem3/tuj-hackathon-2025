@@ -16,5 +16,8 @@ MonoBehaviour:
   distanceActual: 0
   meshFilter: {fileID: 0}
   meshRenderer: {fileID: 0}
+  shape: 0
+  material: 0
+  brightnessCurve: {fileID: 11400000, guid: 8169e06f0cdcd489abd510fb111d83a6, type: 2}
   lightQuality: {fileID: 11400000, guid: 572fa76c3f797be318b0ffb2e4fcb3cb, type: 2}
   luminosityTotal: 0
