@@ -73,6 +73,10 @@ public class ObjectViewer : MonoBehaviour {
         return sum / (float)pixels.Length / 3f;
     }
 
+    public void onBodyChange(Body b) {
+        
+    }
+
     public void SetMesh(Mesh mesh) {
         meshFilter.mesh = mesh;
     }
