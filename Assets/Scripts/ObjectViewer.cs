@@ -26,7 +26,7 @@ public class ObjectViewer : MonoBehaviour {
         //    textures[i] = new Texture2D(source.width, source.height);
 
         SetObjectDistance(5f);
-        BeginCaptureSequence();
+        //BeginCaptureSequence();
     }
 
     void Update() {
@@ -75,6 +75,9 @@ public class ObjectViewer : MonoBehaviour {
 
     public void onBodyChange(Body b) {
         SetMesh(b.mesh);
+        SetMaterial(b.material);
+        SetObjectScale(b.scale);
+        SetObjectOffset(b.offset);
     }
 
     public void SetMesh(Mesh mesh) {
@@ -87,6 +90,10 @@ public class ObjectViewer : MonoBehaviour {
 
     public void SetObjectScale(float scale) {
         o_Object.localScale = new Vector3(scale, scale, scale);
+    }
+
+    public void SetObjectOffset(Vector3 offset) {
+        o_Object.localPosition = offset;
     }
 
     public void SetObjectDistance(float distance) {
