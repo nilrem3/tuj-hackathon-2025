@@ -14,3 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sizeActual: 10
   distanceActual: 0
+  meshFilter: {fileID: 0}
+  brightnessCurve: {fileID: 11400000, guid: 8169e06f0cdcd489abd510fb111d83a6, type: 2}
+  meshRenderer: {fileID: 0}
+  lightQuality: {fileID: 11400000, guid: 4576d6ba195c74352ac2c924876e4d16, type: 2}
+  luminosityTotal: 0
