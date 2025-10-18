@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 [CreateAssetMenu(fileName = "Body", menuName = "Scriptable Objects/Body")]
 public class Body : ScriptableObject
@@ -31,7 +31,6 @@ public class Body : ScriptableObject
     public Material material;
     public Curve brightnessCurve;
     
-    public MeshRenderer meshRenderer;
     public Curve lightQuality;
 
     public int luminosityTotal;

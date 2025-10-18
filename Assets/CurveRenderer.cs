@@ -29,11 +29,15 @@ public class CurveRenderer : MonoBehaviour
     }
 
     public void setPoints() {
-        lr.positionCount = this.curve.values.Length;
-        double horizontalStep = (RIGHT_EDGE - LEFT_EDGE) / (this.curve.values.Length - 1);
+        setPointsFromArray(this.curve.values);
+    }
+
+    public void setPointsFromArray(int[] array) {
+        lr.positionCount = array.Length;
+        double horizontalStep = (RIGHT_EDGE - LEFT_EDGE) / (array.Length - 1);
         double verticalStep = (TOP_EDGE - BOTTOM_EDGE) / 100;
-        for (int i = 0; i < this.curve.values.Length; i++) {
-            Vector3 point = new Vector3((float)(LEFT_EDGE + horizontalStep * i), (float)(BOTTOM_EDGE + verticalStep * this.curve.values[i]), (float)Z_VALUE);
+        for (int i = 0; i < array.Length; i++) {
+            Vector3 point = new Vector3((float)(LEFT_EDGE + horizontalStep * i), (float)(BOTTOM_EDGE + verticalStep * array[i]), (float)Z_VALUE);
             lr.SetPosition(i, point);
         }
     }
