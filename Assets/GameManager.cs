@@ -26,8 +26,6 @@ public class GameManager : MonoBehaviour
 
     public ObjectViewer viewer;
 
-    public UnityEvent<Body> onBodyChosen;
-    
     private HashSet<int> _visitedBodies = new HashSet<int>();
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -90,7 +88,6 @@ public class GameManager : MonoBehaviour
         
         CalculateNoisyValues();
         
-        //onBodyChosen.Invoke(bodies[currentBodyIndex]);
         viewer.onBodyChange(CurrentBody);
         state = GameState.Playing;
     }

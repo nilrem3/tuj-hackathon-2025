@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c830e825c2ca54601a9ba438ea42252f, type: 3}
-  m_Name: Moai
+  m_Name: Cube
   m_EditorClassIdentifier: 
   positionOffset: {x: 0, y: 0, z: 0}
   scaleOffset: 1
-  sizeActual: 10
+  sizeActual: 0
   distanceActual: 0
-  mesh: {fileID: -2432090755550338912, guid: 1dd51a62255d0084a97172de61c32a99, type: 3}
-  material: {fileID: -7974662883447924875, guid: 8bc00cc0dcb39cbf59c530d69cc049b1, type: 3}
-  shapeDef: 0
-  materialDef: 0
-  brightnessCurve: {fileID: 11400000, guid: 8169e06f0cdcd489abd510fb111d83a6, type: 2}
-  lightQuality: {fileID: 11400000, guid: 572fa76c3f797be318b0ffb2e4fcb3cb, type: 2}
+  mesh: {fileID: -1828685522041717323, guid: 3ad7117c14d9c94d9a55f3c5481c698a, type: 3}
+  material: {fileID: 2100000, guid: f1957ed9fb580ce28981a7c8357d2390, type: 2}
+  shapeDef: 2
+  materialDef: 1
+  brightnessCurve: {fileID: 11400000, guid: 4e084b431bc0c3a91984b1c55fce695c, type: 2}
+  lightQuality: {fileID: 11400000, guid: 8c0d015c987e76105a43e79d60a57bda, type: 2}
   luminosityTotal: 0

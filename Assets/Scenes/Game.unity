@@ -151,26 +151,13 @@ MonoBehaviour:
   state: 0
   bodies:
   - {fileID: 11400000, guid: 86bfc5d9e78dd4ea0be5b57acae04d6a, type: 2}
+  - {fileID: 11400000, guid: c65a9d9b06319d53ca61208e0549f71b, type: 2}
   currentBodyIndex: -1
   CurrentLuminosity: 0
   CurrentBrightnessCurve: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   CurrentLightQuality: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   noiseMax: 5
-  onBodyChosen:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1068284333}
-        m_TargetAssemblyTypeName: ObjectViewer, Assembly-CSharp
-        m_MethodName: onBodyChange
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: Body, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  viewer: {fileID: 1068284333}
 --- !u!4 &17156153
 Transform:
   m_ObjectHideFlags: 0
@@ -273,30 +260,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2303800638257842088, guid: 1b66860f7bbe45a278d6baeec8b04706, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2303800638257842088, guid: 1b66860f7bbe45a278d6baeec8b04706, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2303800638257842088, guid: 1b66860f7bbe45a278d6baeec8b04706, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2303800638257842088, guid: 1b66860f7bbe45a278d6baeec8b04706, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -580.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2303800638257842088, guid: 1b66860f7bbe45a278d6baeec8b04706, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 322
-      objectReference: {fileID: 0}
-    - target: {fileID: 2795724340407432842, guid: 1b66860f7bbe45a278d6baeec8b04706, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3354764639207212910, guid: 1b66860f7bbe45a278d6baeec8b04706, type: 3}
       propertyPath: m_Name
       value: Book
@@ -315,11 +278,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9152901129132526090, guid: 1b66860f7bbe45a278d6baeec8b04706, type: 3}
       propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].time
-      value: 0.1048951
+      value: 0.09721756
       objectReference: {fileID: 0}
     - target: {fileID: 9152901129132526090, guid: 1b66860f7bbe45a278d6baeec8b04706, type: 3}
       propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].value
-      value: 0.014752854
+      value: 0.032938004
       objectReference: {fileID: 0}
     - target: {fileID: 9181607871513469358, guid: 1b66860f7bbe45a278d6baeec8b04706, type: 3}
       propertyPath: m_Camera
@@ -425,6 +388,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5943151956891808740, guid: bc1c14095ba5b6ec39c735ee976a33d7, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: -876546973899608171, guid: e3337ef4fbf812c158addfb01fd7606f, type: 3}
     - target: {fileID: 6765391854802117242, guid: bc1c14095ba5b6ec39c735ee976a33d7, type: 3}
       propertyPath: m_LocalPosition.z
       value: 20.46
