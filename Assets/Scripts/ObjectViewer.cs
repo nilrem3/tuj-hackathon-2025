@@ -8,7 +8,6 @@ public class ObjectViewer : MonoBehaviour {
     [SerializeField] private RenderTexture source;
     [SerializeField] private MeshFilter meshFilter;
     [SerializeField] private MeshRenderer meshRenderer;
-    [SerializeField] private CurveRenderer curveRenderer;
 
     private float rotation_speed = 0.1f;
     private float rotation = 0f;
@@ -57,7 +56,6 @@ public class ObjectViewer : MonoBehaviour {
             foreach (int i in GetValues()) {
                 Debug.Log(i);
             }
-            //curveRenderer.setPointsFromArray(GetValues());
         }
     }
 

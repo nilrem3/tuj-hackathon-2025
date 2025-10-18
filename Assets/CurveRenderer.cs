@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CurveRenderer : MonoBehaviour
 {
-    const double Z_VALUE = -0.01;
+    const double Z_VALUE = -0.025;
     const double LEFT_EDGE = -0.5;
     const double RIGHT_EDGE = 0.5;
     const double TOP_EDGE = 0.5;

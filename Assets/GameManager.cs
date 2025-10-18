@@ -27,6 +27,9 @@ public class GameManager : MonoBehaviour
     public ObjectViewer viewer;
 
     private HashSet<int> _visitedBodies = new HashSet<int>();
+
+    public CurveRenderer lightCurveRenderer;
+    public CurveRenderer spectralRenderer;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -89,6 +92,11 @@ public class GameManager : MonoBehaviour
         CalculateNoisyValues();
         
         viewer.onBodyChange(CurrentBody);
+        lightCurveRenderer.curve = CurrentBody.brightnessCurve;
+        lightCurveRenderer.setPoints();
+        spectralRenderer.curve = CurrentBody.lightQuality;
+        spectralRenderer.setPoints();
+
         state = GameState.Playing;
     }
 
