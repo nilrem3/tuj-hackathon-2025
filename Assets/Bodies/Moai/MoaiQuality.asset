@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e07b1ce20f7444f3fae7e4d7880c4526, type: 3}
+  m_Script: {fileID: 11500000, guid: 4fe4644414c584626a78e1c5ab2d55d1, type: 3}
   m_Name: MoaiQuality
   m_EditorClassIdentifier: 
-  values: 
+  values: 4300000046000000440000004100000039000000310000001e0000003e0000004000000041000000

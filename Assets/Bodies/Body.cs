@@ -28,10 +28,11 @@ public class Body : ScriptableObject
     public MeshRenderer meshRenderer;
     
     public Shape shape;
-    public BrightnessCurve brightnessCurve;
-    
     public Material material;
-    public LightQuality lightQuality;
+    public Curve brightnessCurve;
+    
+    public MeshRenderer meshRenderer;
+    public Curve lightQuality;
 
     public int luminosityTotal;
 }

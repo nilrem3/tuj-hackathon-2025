@@ -10,7 +10,7 @@ public class CurveRenderer : MonoBehaviour
 
     private LineRenderer lr;
 
-    public BrightnessCurve curve;
+    public Curve curve;
 
     void Awake() {
         lr = GetComponent<LineRenderer>();
