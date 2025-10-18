@@ -608,6 +608,7 @@ GameObject:
   - component: {fileID: 1966339549}
   - component: {fileID: 1966339548}
   - component: {fileID: 1966339547}
+  - component: {fileID: 1966339552}
   m_Layer: 0
   m_Name: CurveRenderer
   m_TagString: Untagged
@@ -639,7 +640,9 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: d9b53402d33188d7ea492f454d47a1ae, type: 2}
+  - {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -671,8 +674,8 @@ LineRenderer:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
-        time: 0.072841644
-        value: 0.123535156
+        time: 0.075733185
+        value: 0.0410614
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -684,7 +687,7 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0, g: 0, b: 0, a: 1}
+      key0: {r: 1, g: 1, b: 1, a: 1}
       key1: {r: 1, g: 1, b: 1, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -807,12 +810,25 @@ Transform:
   m_GameObject: {fileID: 1966339546}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.0251, y: 2.298191, z: -6.285223}
+  m_LocalPosition: {x: -0.275, y: 2.267, z: -4.01}
   m_LocalScale: {x: 2.1765, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1966339552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966339546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d93b39a9fc54889dcb9efc3ead583ea2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curve: {fileID: 11400000, guid: 8169e06f0cdcd489abd510fb111d83a6, type: 2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
