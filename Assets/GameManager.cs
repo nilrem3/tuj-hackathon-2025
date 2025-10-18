@@ -23,7 +23,9 @@ public class GameManager : MonoBehaviour
     public int[] CurrentBrightnessCurve = new int[10];
     public int[] CurrentLightQuality = new int[10];
     [SerializeField] private int noiseMax = 5;
-    [SerializeField] private GameObject showOnWin;
+    [SerializeField] private MeshRenderer changeOnWin;
+    [SerializeField] private GameObject disableOnWin;
+    [SerializeField] private Material materialOnWin;
 
     public ObjectViewer viewer;
 
@@ -146,7 +148,8 @@ public class GameManager : MonoBehaviour
         bool isCorrect = CurrentBody.shapeDef == shape_selection && CurrentBody.materialDef == material_selection;
 
         if (isCorrect) {
-            showOnWin.SetActive(true);
+            disableOnWin.SetActive(false);
+            changeOnWin.material = materialOnWin;
         }
     }
 }
