@@ -8,7 +8,6 @@ public class ObjectViewer : MonoBehaviour {
     [SerializeField] private RenderTexture source;
     [SerializeField] private MeshFilter meshFilter;
     [SerializeField] private MeshRenderer meshRenderer;
-    [SerializeField] private Material material;
 
     private float rotation_speed = 0.1f;
     private float rotation = 0f;
@@ -22,9 +21,9 @@ public class ObjectViewer : MonoBehaviour {
     }
 
     void Start() {
-        for (int i = 0; i < textures.Length; i++)
-            textures[i] = new Texture2D(source.width, source.height);
-        
+        //for (int i = 0; i < textures.Length; i++)
+        //    textures[i] = new Texture2D(source.width, source.height);
+
         BeginCaptureSequence();
     }
 
@@ -46,8 +45,14 @@ public class ObjectViewer : MonoBehaviour {
     }
 
     private void captureImage() {
-        Graphics.CopyTexture(source, 0, 1, textures[currentTexture], 0, 1);
-        brightness_values[currentTexture] = 
+        Debug.Log("capturing image");
+        RenderTexture current = RenderTexture.active;
+        RenderTexture.active = source;
+        Texture2D texture = new Texture2D(source.width, source.height, TextureFormat.RGBA32, false);
+        Graphics.CopyTexture(source, texture);
+        brightness_values[currentTexture] = get_average(texture);
+        RenderTexture.active = current;
+        
         currentTexture++;
         if (currentTexture >= textures.Length) {
             currentTexture = 0;
@@ -61,8 +66,10 @@ public class ObjectViewer : MonoBehaviour {
         foreach (Color pixel in pixels) {
             sum += pixel.r + pixel.g + pixel.b;
         }
+        
+        Debug.Log(sum);
 
-        return sum / pixels.Length / 3f;
+        return sum / (float)pixels.Length / 3f;
     }
 
     public void SetMesh(Mesh mesh) {
