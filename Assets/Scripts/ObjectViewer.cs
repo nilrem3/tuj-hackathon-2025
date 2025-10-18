@@ -17,9 +17,15 @@ public class ObjectViewer : MonoBehaviour {
     private int currentTexture = 0;
     private bool capturing = false;
 
+    public bool Capturing {
+        get { return this.capturing; }
+    }
+
     void Start() {
         for (int i = 0; i < textures.Length; i++)
             textures[i] = new Texture2D(source.width, source.height);
+        
+        BeginCaptureSequence();
     }
 
     void Update() {
@@ -30,10 +36,17 @@ public class ObjectViewer : MonoBehaviour {
             if (capturing)
                 captureImage();
         }
+
+        if (!capturing) {
+            Debug.Log("Begin Brightness Values");
+            for (int i = 0; i < this.brightness_values.Length; i++) {
+                Debug.Log(this.brightness_values[i]);
+            }
+        }
     }
 
     private void captureImage() {
-        Graphics.CopyTexture(source, textures[currentTexture]);
+        Graphics.CopyTexture(source, 0, 1, textures[currentTexture], 0, 1);
         brightness_values[currentTexture] = 
         currentTexture++;
         if (currentTexture >= textures.Length) {
