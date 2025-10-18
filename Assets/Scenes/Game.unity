@@ -311,11 +311,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2077430093344451999, guid: bc1c14095ba5b6ec39c735ee976a33d7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.5
+      value: 1.58
       objectReference: {fileID: 0}
     - target: {fileID: 2077430093344451999, guid: bc1c14095ba5b6ec39c735ee976a33d7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 2077430093344451999, guid: bc1c14095ba5b6ec39c735ee976a33d7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -347,7 +347,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2248376369360422277, guid: bc1c14095ba5b6ec39c735ee976a33d7, type: 3}
       propertyPath: m_Name
-      value: The
+      value: Telescope View
       objectReference: {fileID: 0}
     - target: {fileID: 3531295979215810700, guid: bc1c14095ba5b6ec39c735ee976a33d7, type: 3}
       propertyPath: m_LocalPosition.z
