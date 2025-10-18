@@ -46,15 +46,29 @@ Shader "Unlit/NoisyImage"
             {
                 return sin(uv.x * f + uv.y * f * 1023.42164);
             }
-
+            
             float _Noise;
             float _Resolution;
+
+            float sampleColor(float2 uv)
+            {
+                float4 col = tex2D(_MainTex, uv / _Resolution);
+                return (col.r + col.g + col.b) / 3.0;
+            }
+
 
             float4 frag (v2f i) : SV_Target
             {
                 float2 id = floor(i.uv * _Resolution);
-                // sample the texture
-                float4 col = tex2D(_MainTex, id / _Resolution);
+
+                float col = 0;
+                
+                for (float x = -3; x <= 3.1; x+=1.5)
+                    for (float y = -3; y <= 3.1; y+=1.5)
+                        col += sampleColor(id + float2(x,y));
+
+                col /= 25.0;
+                
                 float noise = noiseFunc(id, 134.26412);
                 return col * (1 - _Noise) + noise * _Noise * _Noise;
             }

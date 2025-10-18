@@ -25,8 +25,8 @@ public class ObjectViewer : MonoBehaviour {
         //for (int i = 0; i < textures.Length; i++)
         //    textures[i] = new Texture2D(source.width, source.height);
 
-        //SetObjectDistance(10f);
-        //BeginCaptureSequence();
+        SetObjectDistance(5f);
+        BeginCaptureSequence();
     }
 
     void Update() {
@@ -36,13 +36,6 @@ public class ObjectViewer : MonoBehaviour {
             rotation -= 36f;
             if (capturing)
                 captureImage();
-        }
-
-        if (!capturing) {
-            Debug.Log("Begin Brightness Values");
-            for (int i = 0; i < this.brightness_values.Length; i++) {
-                Debug.Log(this.brightness_values[i]);
-            }
         }
     }
 
@@ -60,7 +53,11 @@ public class ObjectViewer : MonoBehaviour {
         if (currentTexture >= textures.Length) {
             currentTexture = 0;
             capturing = false;
-            curveRenderer.setPointsFromArray(GetValues());
+
+            foreach (int i in GetValues()) {
+                Debug.Log(i);
+            }
+            //curveRenderer.setPointsFromArray(GetValues());
         }
     }
 
@@ -74,6 +71,10 @@ public class ObjectViewer : MonoBehaviour {
         Debug.Log(sum);
 
         return sum / (float)pixels.Length / 3f;
+    }
+
+    public void onBodyChange(Body b) {
+        SetMesh(b.mesh);
     }
 
     public void SetMesh(Mesh mesh) {
@@ -100,11 +101,11 @@ public class ObjectViewer : MonoBehaviour {
 
     public int[] GetValues() {
         float max = Mathf.Max(brightness_values);
-        float min = Mathf.Min(brightness_values);
+        //float min = Mathf.Min(brightness_values);
         
         int[] remapped_values = new int[brightness_values.Length];
         for (int i = 0; i < brightness_values.Length; i++)
-            remapped_values[i] = (int)Mathf.Lerp(0f, 100f, Mathf.InverseLerp(min, max, brightness_values[i]));
+            remapped_values[i] = (int)Mathf.Lerp(0f, 100f, Mathf.InverseLerp(0, max, brightness_values[i]));
         
         return remapped_values;
     }
