@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     public int[] CurrentBrightnessCurve = new int[10];
     public int[] CurrentLightQuality = new int[10];
     [SerializeField] private int noiseMax = 5;
+    [SerializeField] private GameObject showOnWin;
 
     public ObjectViewer viewer;
 
@@ -30,8 +31,9 @@ public class GameManager : MonoBehaviour
 
     public CurveRenderer lightCurveRenderer;
     public CurveRenderer spectralRenderer;
-    
-    private 
+
+    private Body.ShapeDef shape_selection;
+    private Body.MaterialDef material_selection;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -129,6 +131,22 @@ public class GameManager : MonoBehaviour
             {
                 CurrentLightQuality[i] = CurrentBody.lightQuality.values[i] + Random.Range(-noiseMax, noiseMax);;
             }
+        }
+    }
+
+    public void SelectShape(int shapeIndex) {
+        shape_selection = (Body.ShapeDef)shapeIndex;
+    }
+
+    public void SelectMaterial(int materialIndex) {
+        material_selection = (Body.MaterialDef)materialIndex;
+    }
+
+    public void SubmitSelections() {
+        bool isCorrect = CurrentBody.shapeDef == shape_selection && CurrentBody.materialDef == material_selection;
+
+        if (isCorrect) {
+            showOnWin.SetActive(true);
         }
     }
 }
