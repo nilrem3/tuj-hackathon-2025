@@ -103,3 +103,6 @@ InitTestScene*.unity*
 .AppleDouble
 .LSOverride
 Icon[]
+
+# Rider config
+.idea

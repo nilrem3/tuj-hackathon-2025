@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: c830e825c2ca54601a9ba438ea42252f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - brightnessCurve: {fileID: 11400000, guid: b6dca93418b6a4751b9f67ef03ab74f4, type: 2}
+  - lightQuality: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
