@@ -24,6 +24,7 @@ public class ObjectViewer : MonoBehaviour {
         //for (int i = 0; i < textures.Length; i++)
         //    textures[i] = new Texture2D(source.width, source.height);
 
+        SetObjectDistance(10f);
         BeginCaptureSequence();
     }
 
@@ -46,12 +47,13 @@ public class ObjectViewer : MonoBehaviour {
 
     private void captureImage() {
         Debug.Log("capturing image");
-        RenderTexture current = RenderTexture.active;
         RenderTexture.active = source;
         Texture2D texture = new Texture2D(source.width, source.height, TextureFormat.RGBA32, false);
-        Graphics.CopyTexture(source, texture);
+        texture.ReadPixels(new Rect(0, 0, source.width, source.height), 0, 0);
+        //Graphics.CopyTexture(source, texture);
+        texture.Apply();
         brightness_values[currentTexture] = get_average(texture);
-        RenderTexture.active = current;
+        Destroy(texture);
         
         currentTexture++;
         if (currentTexture >= textures.Length) {
