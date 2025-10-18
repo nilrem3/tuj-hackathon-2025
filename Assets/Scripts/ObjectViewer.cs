@@ -8,6 +8,7 @@ public class ObjectViewer : MonoBehaviour {
     [SerializeField] private RenderTexture source;
     [SerializeField] private MeshFilter meshFilter;
     [SerializeField] private MeshRenderer meshRenderer;
+    [SerializeField] private CurveRenderer curveRenderer;
 
     private float rotation_speed = 0.1f;
     private float rotation = 0f;
@@ -24,8 +25,8 @@ public class ObjectViewer : MonoBehaviour {
         //for (int i = 0; i < textures.Length; i++)
         //    textures[i] = new Texture2D(source.width, source.height);
 
-        SetObjectDistance(10f);
-        BeginCaptureSequence();
+        //SetObjectDistance(10f);
+        //BeginCaptureSequence();
     }
 
     void Update() {
@@ -59,6 +60,7 @@ public class ObjectViewer : MonoBehaviour {
         if (currentTexture >= textures.Length) {
             currentTexture = 0;
             capturing = false;
+            curveRenderer.setPointsFromArray(GetValues());
         }
     }
 
