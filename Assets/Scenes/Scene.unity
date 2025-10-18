@@ -283,7 +283,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d060407b1b7c1c44883f583ba1cf2aee, type: 2}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -926,12 +926,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d62a0fdbed72a440bfae6102a12be63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  o_Axis: {fileID: 1224420505}
-  o_Rotation: {fileID: 895851186}
-  o_Object: {fileID: 503212078}
+
+  o_Axis: {fileID: 0}
+  o_Rotation: {fileID: 0}
+  o_Object: {fileID: 0}
   source: {fileID: 8400000, guid: 648b89b0fb260774b8f187baebafea5d, type: 2}
-  meshFilter: {fileID: 503212080}
-  meshRenderer: {fileID: 503212079}
+  meshFilter: {fileID: 0}
+  meshRenderer: {fileID: 0}
   material: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
