@@ -20,6 +20,9 @@ public class Body : ScriptableObject
         VolcanicAsh = 4,
         Wood = 5,
     }
+
+    public Vector3 positionOffset;
+    public float scaleOffset;
     
     public int sizeActual;
     public int distanceActual;
