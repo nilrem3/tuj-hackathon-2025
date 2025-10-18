@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Cube
   m_EditorClassIdentifier: 
   positionOffset: {x: 0, y: 0, z: 0}
-  scaleOffset: 1
+  scaleOffset: 0.02
   sizeActual: 0
   distanceActual: 0
   mesh: {fileID: -2432090755550338912, guid: 5ebf613a2df4175ad9df4a645a066402, type: 3}
