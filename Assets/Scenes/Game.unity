@@ -261,6 +261,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2303800638257842088, guid: 1b66860f7bbe45a278d6baeec8b04706, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2303800638257842088, guid: 1b66860f7bbe45a278d6baeec8b04706, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2303800638257842088, guid: 1b66860f7bbe45a278d6baeec8b04706, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2303800638257842088, guid: 1b66860f7bbe45a278d6baeec8b04706, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -580.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2303800638257842088, guid: 1b66860f7bbe45a278d6baeec8b04706, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 322
+      objectReference: {fileID: 0}
+    - target: {fileID: 2795724340407432842, guid: 1b66860f7bbe45a278d6baeec8b04706, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3354764639207212910, guid: 1b66860f7bbe45a278d6baeec8b04706, type: 3}
       propertyPath: m_Name
       value: Book
@@ -279,11 +303,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9152901129132526090, guid: 1b66860f7bbe45a278d6baeec8b04706, type: 3}
       propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].time
-      value: 0.09721756
+      value: 0.1048951
       objectReference: {fileID: 0}
     - target: {fileID: 9152901129132526090, guid: 1b66860f7bbe45a278d6baeec8b04706, type: 3}
       propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].value
-      value: 0.032938004
+      value: 0.014752854
       objectReference: {fileID: 0}
     - target: {fileID: 9181607871513469358, guid: 1b66860f7bbe45a278d6baeec8b04706, type: 3}
       propertyPath: m_Camera
