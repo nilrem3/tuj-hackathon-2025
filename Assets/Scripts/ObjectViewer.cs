@@ -76,8 +76,8 @@ public class ObjectViewer : MonoBehaviour {
     public void onBodyChange(Body b) {
         SetMesh(b.mesh);
         SetMaterial(b.material);
-        SetObjectScale(b.scale);
-        SetObjectOffset(b.offset);
+        SetObjectScale(b.scaleOffset);
+        SetObjectOffset(b.positionOffset);
     }
 
     public void SetMesh(Mesh mesh) {
