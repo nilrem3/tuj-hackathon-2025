@@ -158,7 +158,19 @@ MonoBehaviour:
   noiseMax: 5
   onBodyChosen:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1068284333}
+        m_TargetAssemblyTypeName: ObjectViewer, Assembly-CSharp
+        m_MethodName: onBodyChange
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: Body, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &17156153
 Transform:
   m_ObjectHideFlags: 0
@@ -383,7 +395,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3531295979215810700, guid: bc1c14095ba5b6ec39c735ee976a33d7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -6.12
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4937103864348294876, guid: bc1c14095ba5b6ec39c735ee976a33d7, type: 3}
       propertyPath: m_LocalScale.x
@@ -645,6 +657,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
+--- !u!114 &1068284333 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6294787752811463877, guid: bc1c14095ba5b6ec39c735ee976a33d7, type: 3}
+  m_PrefabInstance: {fileID: 452674196}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99ffd21325c19954e8f87d6975da3f8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1192096175 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3354764639207212910, guid: 1b66860f7bbe45a278d6baeec8b04706, type: 3}

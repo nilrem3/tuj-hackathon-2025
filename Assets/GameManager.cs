@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour
     public int[] CurrentLightQuality = new int[10];
     [SerializeField] private int noiseMax = 5;
 
+    public ObjectViewer viewer;
+
     public UnityEvent<Body> onBodyChosen;
     
     private HashSet<int> _visitedBodies = new HashSet<int>();
@@ -74,9 +76,13 @@ public class GameManager : MonoBehaviour
     void ChooseBody()
     {
         int newBodyIndex = -1;
+        int iters = 100;
         do
         {
             newBodyIndex = Random.Range(0, bodies.Length);
+            if(++iters > 100) {
+                break;
+            }
         } while (currentBodyIndex == newBodyIndex && _visitedBodies.Contains(newBodyIndex));
         
         _visitedBodies.Add(newBodyIndex);
@@ -84,7 +90,8 @@ public class GameManager : MonoBehaviour
         
         CalculateNoisyValues();
         
-        onBodyChosen.Invoke(bodies[currentBodyIndex]);
+        //onBodyChosen.Invoke(bodies[currentBodyIndex]);
+        viewer.onBodyChange(CurrentBody);
         state = GameState.Playing;
     }
 
