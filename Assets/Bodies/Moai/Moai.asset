@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sizeActual: 10
   distanceActual: 0
-  meshFilter: {fileID: 0}
-  meshRenderer: {fileID: 0}
-  shape: 0
-  material: 0
+  mesh: {fileID: -2432090755550338912, guid: 8bc00cc0dcb39cbf59c530d69cc049b1, type: 3}
+  material: {fileID: -7974662883447924875, guid: 8bc00cc0dcb39cbf59c530d69cc049b1, type: 3}
+  shapeDef: 0
+  materialDef: 0
   brightnessCurve: {fileID: 11400000, guid: 8169e06f0cdcd489abd510fb111d83a6, type: 2}
   lightQuality: {fileID: 11400000, guid: 572fa76c3f797be318b0ffb2e4fcb3cb, type: 2}
   luminosityTotal: 0

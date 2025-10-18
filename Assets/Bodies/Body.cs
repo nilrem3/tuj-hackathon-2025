@@ -3,7 +3,7 @@
 [CreateAssetMenu(fileName = "Body", menuName = "Scriptable Objects/Body")]
 public class Body : ScriptableObject
 {
-    public enum Shape
+    public enum ShapeDef
     {
         Sphere = 0,
         Cylinder = 1,
@@ -11,7 +11,7 @@ public class Body : ScriptableObject
         Lumpy = 3,
     }
 
-    public enum Material
+    public enum MaterialDef
     {
         Ice = 0,
         Iron = 1,
@@ -24,11 +24,11 @@ public class Body : ScriptableObject
     public int sizeActual;
     public int distanceActual;
     
-    public MeshFilter meshFilter;
-    public MeshRenderer meshRenderer;
-    
-    public Shape shape;
+    public Mesh mesh;
     public Material material;
+    
+    public ShapeDef shapeDef;
+    public MaterialDef materialDef;
     public Curve brightnessCurve;
     
     public Curve lightQuality;
